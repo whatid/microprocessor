@@ -1,8 +1,6 @@
-# idk
-MP 3 repository for IDK
+# Pipelined microprocessor design 
+MP 3 repository
 This repository has 3 contributors Frederick Wirjo , Weizhong Huang and Simrin Wahal
-
-For CP1 ( Due : 3/20) We are going to implement a pipelined LC3 with ADD, AND, NOT, LDR, STR, and BR instructions.
 
 For the pipelined datapath, we have 5 stages : Instruction Fetch, Instruction Decode, Insruction Execute, Instruction Memory and Instruction WB
 
@@ -57,6 +55,10 @@ Changed Control_ROM.sv
 
 
 Note : ZEXT unit not found in ID_datapath 
+
+Update: 
+
+Added Branch Target Buffer, support for LC3X instructions including Multiply/Divide/other Logical Operators, 4-way cache with pseudo LRU replacement policy. 
 
 
 
