@@ -1,0 +1,25 @@
+import lc3b_types::*;
+module ID_EX
+(	input clk,
+	/*Inputs*/	
+	input lc3b_offset6 ID_adj6_out,
+	input lc3b_offset9 ID_adj9_out,
+	input lc3b_word ID_src1_out, 
+	input lc3b_word ID_src2_out,
+	input logic ID_branch_enable,
+	/*Outputs*/
+	output lc3b_offset6 adj6_out,
+	output lc3b_offset9 adj9_out,
+	output lc3b_word src1_out, 
+	output lc3b_word src2_out,
+	output logic branch_enable
+);
+
+assign adj6_out = ID_adj6_out;
+assign adj9_out = ID_adj9_out;
+assign sr1_out = ID_sr1_out;
+assign sr2_out = ID_sr2_out;
+assign branch_enable = ID_branch_enable;
+
+
+endmodule: ID_EX

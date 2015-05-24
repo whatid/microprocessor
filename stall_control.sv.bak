@@ -1,0 +1,10 @@
+module stall_control
+(
+	input logic mem_resp, 
+	output logic load_ifid, 
+	output logic load idex, 
+	output logic load exmem, 
+	output logic load memwb
+);
+
+endmodule: stall_control

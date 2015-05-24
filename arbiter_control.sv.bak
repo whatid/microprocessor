@@ -1,0 +1,107 @@
+import lc3b_types::*;
+
+module arbiter_control
+(
+	input clk, 
+	/* iCache Signals */ 
+	input logic ctrl_pmem_read_a, 
+	input logic ctrl_pmem_write_a,
+	output logic ctrl_icache_ready,  
+
+	/* dCache Signals */
+	input logic ctrl_pmem_read_b, 
+	input logic ctrl_pmem_write_b,  
+	output logic ctrl_dcache_ready, 
+	
+	/* PMEM Signals */ 
+	input logic ctrl_pmem_resp, 
+	output logic ctrl_pmem_read, 
+	output logic ctrl_pmem_write, 
+	
+	/* mux select signal */ 
+	output logic ctrl_addr_select
+	
+);
+
+/* States */
+enum int unsigned {
+	idle, 
+	active,
+	respond
+	
+} state, next_state;
+
+always_comb 
+begin
+	/* Default Output Assignments */
+	ctrl_icache_ready = 1'b0; 
+	ctrl_dcache_ready = 1'b0; 
+	ctrl_pmem_read = 1'b0; 
+	ctrl_pmem_write = 1'b0; 
+	ctrl_addr_select = 1'b0; 
+	
+	case(state)
+		idle: begin
+		
+		
+		end
+		
+		active: begin
+			if (ctrl_pmem_read_a == 1)
+			begin
+				ctrl_addr_select = 0; 
+				ctrl_pmem_read = 1; 
+				ctrl_pmem_write = 0; 
+			end
+			else 
+			begin
+				ctrl_addr_select = 1; 
+				if (ctrl_pmem_read_b == 1)
+					ctrl_pmem_read = 1; 
+				else 
+					ctrl_pmem_write = 1; 
+			end
+		end
+		
+		respond: begin
+			begin
+				if (ctrl_pmem_read_a == 1)
+					ctrl_icache_ready = 1; 
+				else
+					ctrl_dcache_ready = 1; 
+			end
+		end
+		
+		default: ; 
+	endcase
+end
+
+always_comb
+begin: next_state_logic
+	case(state)
+		idle: begin
+			if (ctrl_pmem_read_a == 1 || ctrl_pmem_write_b == 1 || ctrl_pmem_read_b == 1)
+				next_state = active; 
+			else 
+				next_state = idle; 
+		end
+		
+		active: begin
+			if (ctrl_pmem_resp == 0)
+				next_state = active; 
+			else 
+				next_state = respond; 
+		end
+		
+		respond: begin
+			next_state = idle; 
+		end
+	endcase
+end
+
+always_ff @(posedge clk)
+begin: next_state_assignment
+    /* Assignment of next state on clock edge */
+	 state = next_state;
+end
+endmodule: arbiter_control

@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="mp3">
+		<CBX_INST_ENTRY INSTANCE_NAME="|mp3_mod|cache:icacheunit|cache_datapath:datapath_unit|array:tag1|altsyncram:data_rtl_0" CBX_FILE_NAME="altsyncram_l2o1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mp3_mod|cache:icacheunit|cache_datapath:datapath_unit|array:tag2|altsyncram:data_rtl_0" CBX_FILE_NAME="altsyncram_l2o1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mp3_mod|mp3_datapath:cpu|ID_EX:regidex|altshift_taps:ctrl_out.regfilemux_sel_rtl_0" CBX_FILE_NAME="shift_taps_dnv.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mp3_mod|mp3_datapath:cpu|InstructionExecute:execute|alu:alu_execute|lpm_mult:Mult0" CBX_FILE_NAME="mult_0dt.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

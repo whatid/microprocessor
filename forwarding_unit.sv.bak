@@ -1,0 +1,85 @@
+import lc3b_types::*;
+
+module forwarding_unit
+(
+
+ input lc3b_word src1_idex ,// from ID
+ input lc3b_word src2_idex ,// from ID
+ input lc3b_word dest_exmem ,
+ input lc3b_word dest_memwb ,
+ input logic ex_mem_regwrite,
+ input logic mem_wb_regwrite, 
+ input logic ld_ex_mem ,  //Load signal for EX-MEM latch 
+ input logic ld_mem_wb ,
+ output logic forwardsrc1mux_sel 
+);
+logic ex_mem_src1;
+logic ex_mem_src2;
+logic mem_wb_src1;
+logic mem_wb_src2;
+logic Forward1_ex_mem;
+logic Forward2_ex_mem;
+logic Forward1_mem_wb;
+logic Forward2_mem_wb;
+logic Forward1_mem_wb_final;
+logic Forward2_mem_wb_final;
+
+always ff
+begin
+//EX hazard 
+//forward from EX/MEM latch -> muxes 
+if (dest_exmem ==src1_idex)
+	ex_mem_src1 =1;
+else
+	ex_mem_src1 =0;
+
+if (dest_exmem ==src2_idex)
+	ex_mem_src2 =1;
+else
+	ex_mem_src2 =0;
+
+if((ld_ex_mem && ex_mem_regwrite) && (ex_mem_src1))
+	begin	
+		Forward1_ex_mem = 1;
+	end
+else
+	begin 
+		Forward1_ex_mem = 0;
+	end
+if((ld_ex_mem && ex_mem_regwrite) && (ex_mem_src2))
+	begin	
+		Forward2_ex_mem = 1;
+	end
+else 
+	begin
+		Forward2_ex_mem = 0;
+ 	end
+ 
+//MEM Hazard 
+//forward form MEMWB latch 
+if (dest_memwb ==src1_idex)
+	mem_wb_src1 =1;
+else
+	mem_wb_src1 =0;
+if (dest_memwb ==src2_idex)
+	mem_wb_src2 =1;
+else
+	mem_wb_src2 =0;
+
+if ((ld_memwb ==1 && mem_wb_regwrite)&&(mem_wb_src1))
+	Forward2_mem_wb = 1;  
+else
+	Forward2_mem_wb = 0;
+if ((ld_memwb ==1 && mem_wb_regwrite)&&(mem_wb_src2))
+	Forward2_mem_wb = 1;  
+else
+	Forward2_mem_wb = 0;
+//EX-EX
+if (Forward1_ex_mem ==1)
+begin
+	forwardsrc1mux_sel =1;
+end
+
+
+
+endmodule: forward_unit

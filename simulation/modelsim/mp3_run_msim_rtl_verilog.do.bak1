@@ -1,0 +1,40 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/register.sv}
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/plus2.sv}
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/mux2.sv}
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/lc3b_types.sv}
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/branch_logic.sv}
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/regfile.sv}
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/MEM_WB.sv}
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/instructionWB.sv}
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/instructionMem.sv}
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/InstructionFetch.sv}
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/InstructionExecute.sv}
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/IF_ID.sv}
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/ID_EX.sv}
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/ID_Datapath.sv}
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/gencc.sv}
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/EX_MEM.sv}
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/ControlROM.sv}
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/comparator.sv}
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/alu.sv}
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/adj.sv}
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/adder.sv}
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/InstructionDecode.sv}
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/mp3.sv}
+
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/mp3_tb.sv}
+vlog -sv -work work +incdir+/home/wirjo2/mp3 {/home/wirjo2/mp3/magic_memory.sv}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  mp3_tb
+
+add wave *
+view structure
+view signals
+run -all

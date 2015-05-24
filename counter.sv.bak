@@ -1,0 +1,38 @@
+import lc3b_types::*;
+
+module counter
+(
+	input clk,
+	input logic inc, 
+	output lc3b_2bit ctr_value
+);
+
+lc3b_2bit ctr; 
+
+initial
+begin
+	ctr = 2'b00; 
+end
+
+always_ff @(posedge clk)
+begin
+	if (inc == 1)
+	begin
+		if (ctr == 2'b11)
+		begin
+			ctr = 2'b00; 
+		end
+		else
+		begin
+			ctr = ctr + 2'b01; 
+		end
+	end
+	else
+	begin
+		ctr = ctr; 
+	end
+end
+
+assign ctr_value = ctr; 
+
+endmodule : counter

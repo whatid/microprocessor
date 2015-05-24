@@ -1,0 +1,45 @@
+library verilog;
+use verilog.vl_types.all;
+library work;
+entity InstructionDecode is
+    port(
+        clk             : in     vl_logic;
+        dest            : in     vl_logic_vector(2 downto 0);
+        trapsel_in      : in     vl_logic;
+        trap_in         : in     vl_logic_vector(7 downto 0);
+        jsr_sel_in      : in     vl_logic;
+        jsr_sel_out     : out    vl_logic;
+        offset_in       : in     vl_logic_vector(10 downto 0);
+        trap_out        : out    vl_logic_vector(7 downto 0);
+        adj11_out       : out    vl_logic_vector(15 downto 0);
+        A               : in     vl_logic;
+        D               : in     vl_logic;
+        imm4            : in     vl_logic_vector(3 downto 0);
+        imm4_out        : out    vl_logic_vector(3 downto 0);
+        threebitopcode  : in     vl_logic_vector(2 downto 0);
+        if_dest         : in     vl_logic_vector(2 downto 0);
+        src1            : in     vl_logic_vector(2 downto 0);
+        src2            : in     vl_logic_vector(2 downto 0);
+        imm5            : in     vl_logic_vector(4 downto 0);
+        imm5_sel        : in     vl_logic;
+        ir_offset6      : in     vl_logic_vector(5 downto 0);
+        ir_offset9      : in     vl_logic_vector(8 downto 0);
+        opcode          : in     work.lc3b_types.lc3b_opcode;
+        id_pc_in        : in     vl_logic_vector(15 downto 0);
+        load_regfile    : in     vl_logic;
+        regfilemux_out  : in     vl_logic_vector(15 downto 0);
+        id_adj6_out     : out    vl_logic_vector(15 downto 0);
+        id_adj9_out     : out    vl_logic_vector(15 downto 0);
+        id_src1_out     : out    vl_logic_vector(15 downto 0);
+        id_src2_out     : out    vl_logic_vector(15 downto 0);
+        ctrl_out        : out    work.lc3b_types.lc3b_control_word;
+        id_pc_out       : out    vl_logic_vector(15 downto 0);
+        srcmux_out      : out    vl_logic_vector(15 downto 0);
+        ldb_offset6_out : out    vl_logic_vector(15 downto 0);
+        f_src1          : out    vl_logic_vector(2 downto 0);
+        f_src2          : out    vl_logic_vector(2 downto 0);
+        load_read       : in     vl_logic;
+        idex_src2       : in     vl_logic_vector(2 downto 0);
+        load_use_stall  : out    vl_logic
+    );
+end InstructionDecode;

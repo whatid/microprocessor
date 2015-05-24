@@ -1,0 +1,59 @@
+import lc3b_types::*;
+module ID_Datapath
+
+(
+	/*IR signals*/	
+	input lc3b_reg dest,
+	input lc3b_reg src1, 
+	input lc3b_reg src2,
+    input lc3b_offset6 offset6,
+    input lc3b_offset9 offset9,
+	input lc3b_control_word ctrl,
+	/*Outputs*/
+	output lc3b_offset6 adj6_out,
+	output lc3b_offset9 adj9_out,
+	output lc3b_word src1_out, 
+	output lc3b_word src2_out       
+);
+
+lc3b_reg storemux_out;
+
+/* storemux */
+mux2 #(.width(3)) storemux
+(
+	.sel(ctrl.storemux_sel),
+	.a(sr1),
+	.b(dest),
+	.f(storemux_out)
+);
+
+
+regfile regfileunit
+(
+    .clk(clk),
+    .load(ctrl.load_regfile),
+    .in(regfilemux_out),
+    .src_a(storemux_out), 
+    .src_b(sr2), 
+    .dest(dest),
+    .reg_a(sr1_out), 
+    .reg_b(sr2_out)
+);
+
+/* ADJ6 */
+adj #(.width(6)) adj6
+(
+    .in(offset6),
+    .out(adj6_out)
+);
+
+/* ADJ9 */
+adj #(.width(9)) adj9
+(
+    .in(offset9),
+    .out(adj9_out)
+);
+
+
+
+endmodule: ID_Datapath

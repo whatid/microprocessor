@@ -1,0 +1,20 @@
+import lc3b_types::*;
+
+module MEM_WB
+(
+	input clk, 
+	input logic mem_resp, 
+	input lc3b_word mem_in, 
+	input lc3b_word mem_out
+);
+
+register mdr_latch 
+(
+	.clk(clk), 
+	.load(mem_resp), 
+	.in(mem_in), 
+	.out(mem_out)
+);
+
+
+endmodule : MEM_WB 

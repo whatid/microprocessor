@@ -1,0 +1,51 @@
+import lc3b_types::*;
+module InstructionExecute (
+input clk ,
+input lc3b_aluop aluop ,
+input alumux_sel , 
+input src1_out ,
+output alu_out ,
+output lc3b_word marmux_out,
+)
+
+/*Internal Signals */
+
+lc3b_word mux2_execute-two_out  ;
+
+
+alu alu_execute (
+.aluop(aluop),
+ .a(src1_out), 
+ .b(alumux_out) ,
+ .f (alu_out)
+);
+
+mux4 alumux_execute (
+.lc3b_sel sel(alumux_sel) ,
+.a(mux2_execute-two_out ),
+.b(), ////Need to get from  ID/EX  reg 
+.c(), ////Need to get from  ID/EX  reg 
+.d(), ////Need to get from  ID/EX  reg 
+.f(alumux_out), 
+
+
+);
+mux2 mux2_execute_one  (
+.lc3b_sel sel(marmux_sel) // Need to ask 
+.a(alumux_out),
+.b(pc_out),
+.f(marmux_out)
+);
+
+/*
+mux2 mux2_execute_two (
+.lc3b_sel sel() , //Need to Ask 
+.a(src2_out ),
+.b(), //Need to get from  ID/EX  reg 
+.f(mux2_execute-two_out )
+
+);
+*/
+
+
+endmodule : InstructionExecute 

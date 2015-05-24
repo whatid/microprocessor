@@ -1,0 +1,754 @@
+# ERROR: No extended dataflow license exists
+# do mp3_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/lc3b_types.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package lc3b_types
+# 
+# Top level modules:
+# 	--none--
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/cache_control.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cache_control
+# 
+# Top level modules:
+# 	cache_control
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/tag_comparator.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package tag_comparator_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module tag_comparator
+# 
+# Top level modules:
+# 	tag_comparator
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/orgate.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module orgate
+# 
+# Top level modules:
+# 	orgate
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/arbiter_control.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module arbiter_control
+# 
+# Top level modules:
+# 	arbiter_control
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/register.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module register
+# 
+# Top level modules:
+# 	register
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/plus2.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module plus2
+# 
+# Top level modules:
+# 	plus2
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/mux2.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux2
+# 
+# Top level modules:
+# 	mux2
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/andgate.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module andgate
+# 
+# Top level modules:
+# 	andgate
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/mux5.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package mux5_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module mux5
+# 
+# Top level modules:
+# 	mux5
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/stall.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module stall
+# 
+# Top level modules:
+# 	stall
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/L2_orgate.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module L2_orgate
+# 
+# Top level modules:
+# 	L2_orgate
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/checkpc.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module checkpc
+# 
+# Top level modules:
+# 	checkpc
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/lru_array.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package lru_array_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module lru_array
+# 
+# Top level modules:
+# 	lru_array
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/pc_array.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package pc_array_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module pc_array
+# 
+# Top level modules:
+# 	pc_array
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/instr_array.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package instr_array_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module instr_array
+# 
+# Top level modules:
+# 	instr_array
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/counter.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package counter_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/forwarding_unit.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package forwarding_unit_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module forwarding_unit
+# 
+# Top level modules:
+# 	forwarding_unit
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/arbiter_datapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package arbiter_datapath_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module arbiter_datapath
+# 
+# Top level modules:
+# 	arbiter_datapath
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/cache_datapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cache_datapath_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cache_datapath
+# 
+# Top level modules:
+# 	cache_datapath
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/cache.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cache_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cache
+# 
+# Top level modules:
+# 	cache
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/tagmux.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package tagmux_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module tagmux
+# 
+# Top level modules:
+# 	tagmux
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/decoder.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package decoder_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module decoder
+# 
+# Top level modules:
+# 	decoder
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/datamux.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package datamux_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module datamux
+# 
+# Top level modules:
+# 	datamux
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/data.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package data_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module dataunit
+# 
+# Top level modules:
+# 	dataunit
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/array.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package array_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module array
+# 
+# Top level modules:
+# 	array
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/arbiter.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package arbiter_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/address_parser.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package address_parser_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module address_parser
+# 
+# Top level modules:
+# 	address_parser
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/zextshift.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package zextshift_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module zextshift
+# 
+# Top level modules:
+# 	zextshift
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/mux3.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package mux3_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module mux3
+# 
+# Top level modules:
+# 	mux3
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/zext.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package zext_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module zext
+# 
+# Top level modules:
+# 	zext
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/sext.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package sext_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module sext
+# 
+# Top level modules:
+# 	sext
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/regfile.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package regfile_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/MEM_WB.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package MEM_WB_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module MEM_WB
+# 
+# Top level modules:
+# 	MEM_WB
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/instructionMem.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package instructionMem_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module instructionMem
+# 
+# Top level modules:
+# 	instructionMem
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/IF_ID.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package IF_ID_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module IF_ID
+# 
+# Top level modules:
+# 	IF_ID
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/ID_EX.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package ID_EX_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module ID_EX
+# 
+# Top level modules:
+# 	ID_EX
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/ID_Datapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package ID_Datapath_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module ID_Datapath
+# 
+# Top level modules:
+# 	ID_Datapath
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/gencc.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package gencc_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module gencc
+# 
+# Top level modules:
+# 	gencc
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/EX_MEM.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package EX_MEM_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module EX_MEM
+# 
+# Top level modules:
+# 	EX_MEM
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/ControlROM.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package ControlROM_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module ControlROM
+# 
+# Top level modules:
+# 	ControlROM
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/comparator.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package comparator_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module comparator
+# 
+# Top level modules:
+# 	comparator
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/alu.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package alu_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/adj.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package adj_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module adj
+# 
+# Top level modules:
+# 	adj
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/adder.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package adder_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/branch_logic.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package branch_logic_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module branch_logic
+# 
+# Top level modules:
+# 	branch_logic
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/mux4.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package mux4_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module mux4
+# 
+# Top level modules:
+# 	mux4
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/trim_byte.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package trim_byte_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module trim_byte
+# 
+# Top level modules:
+# 	trim_byte
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/L2_data.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package L2_data_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module L2_data
+# 
+# Top level modules:
+# 	L2_data
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/L2_cache_datapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package L2_cache_datapath_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module L2_cache_datapath
+# 
+# Top level modules:
+# 	L2_cache_datapath
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/L2_address_parser.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package L2_address_parser_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module L2_address_parser
+# 
+# Top level modules:
+# 	L2_address_parser
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/L2_Cache.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package L2_Cache_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module L2_Cache
+# 
+# Top level modules:
+# 	L2_Cache
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/hazard_detection.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package hazard_detection_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module hazard_detection
+# 
+# Top level modules:
+# 	hazard_detection
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/L2_cache_control.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package L2_cache_control_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module L2_cache_control
+# 
+# Top level modules:
+# 	L2_cache_control
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/L2_datamux.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package L2_datamux_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module L2_datamux
+# 
+# Top level modules:
+# 	L2_datamux
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/L2_tagmux.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package L2_tagmux_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module L2_tagmux
+# 
+# Top level modules:
+# 	L2_tagmux
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/btb.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package btb_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module btb
+# 
+# Top level modules:
+# 	btb
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/instructionWB.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package instructionWB_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module instructionWB
+# 
+# Top level modules:
+# 	instructionWB
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/InstructionExecute.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package InstructionExecute_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module InstructionExecute
+# 
+# Top level modules:
+# 	InstructionExecute
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/InstructionDecode.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package InstructionDecode_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module InstructionDecode
+# 
+# Top level modules:
+# 	InstructionDecode
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/mp3_mod.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package mp3_mod_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module mp3_mod
+# 
+# Top level modules:
+# 	mp3_mod
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/InstructionFetch.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package InstructionFetch_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module InstructionFetch
+# 
+# Top level modules:
+# 	InstructionFetch
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/mp3_datapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package mp3_datapath_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module mp3_datapath
+# 
+# Top level modules:
+# 	mp3_datapath
+# 
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/mp3.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mp3
+# 
+# Top level modules:
+# 	mp3
+# vlog -sv -work work +incdir+/home/wirjo2/mp3_wtf {/home/wirjo2/mp3_wtf/physical_memory.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module physical_memory
+# 
+# Top level modules:
+# 	physical_memory
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs="+acc"  mp3
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps mp3 
+# Loading sv_std.std
+# Loading work.mp3
+# Loading work.lc3b_types
+# Loading work.mp3_mod_sv_unit
+# Loading work.mp3_mod
+# Loading work.mp3_datapath_sv_unit
+# Loading work.mp3_datapath
+# Loading work.InstructionFetch_sv_unit
+# Loading work.InstructionFetch
+# Loading work.plus2
+# Loading work.adder_sv_unit
+# Loading work.adder
+# Loading work.mux4_sv_unit
+# Loading work.mux4
+# Loading work.register
+# Loading work.mux2
+# Loading work.btb_sv_unit
+# Loading work.btb
+# Loading work.pc_array_sv_unit
+# Loading work.pc_array
+# Loading work.tag_comparator_sv_unit
+# Loading work.tag_comparator
+# Loading work.checkpc
+# Loading work.instr_array_sv_unit
+# Loading work.instr_array
+# Loading work.counter_sv_unit
+# Loading work.counter
+# Loading work.stall
+# Loading work.IF_ID_sv_unit
+# Loading work.IF_ID
+# Loading work.InstructionDecode_sv_unit
+# Loading work.InstructionDecode
+# Loading work.ID_Datapath_sv_unit
+# Loading work.ID_Datapath
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.sext_sv_unit
+# Loading work.sext
+# Loading work.ControlROM_sv_unit
+# Loading work.ControlROM
+# Loading work.hazard_detection_sv_unit
+# Loading work.hazard_detection
+# Loading work.ID_EX_sv_unit
+# Loading work.ID_EX
+# Loading work.InstructionExecute_sv_unit
+# Loading work.InstructionExecute
+# Loading work.zextshift_sv_unit
+# Loading work.zextshift
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.mux3_sv_unit
+# Loading work.mux3
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.forwarding_unit_sv_unit
+# Loading work.forwarding_unit
+# Loading work.EX_MEM_sv_unit
+# Loading work.EX_MEM
+# Loading work.instructionMem_sv_unit
+# Loading work.instructionMem
+# Loading work.MEM_WB_sv_unit
+# Loading work.MEM_WB
+# Loading work.instructionWB_sv_unit
+# Loading work.instructionWB
+# Loading work.trim_byte_sv_unit
+# Loading work.trim_byte
+# Loading work.mux5_sv_unit
+# Loading work.mux5
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.comparator_sv_unit
+# Loading work.comparator
+# Loading work.branch_logic_sv_unit
+# Loading work.branch_logic
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.address_parser_sv_unit
+# Loading work.address_parser
+# Loading work.array_sv_unit
+# Loading work.array
+# Loading work.andgate
+# Loading work.orgate
+# Loading work.data_sv_unit
+# Loading work.dataunit
+# Loading work.datamux_sv_unit
+# Loading work.datamux
+# Loading work.decoder_sv_unit
+# Loading work.decoder
+# Loading work.tagmux_sv_unit
+# Loading work.tagmux
+# Loading work.cache_control
+# Loading work.arbiter_sv_unit
+# Loading work.arbiter
+# Loading work.arbiter_control
+# Loading work.arbiter_datapath_sv_unit
+# Loading work.arbiter_datapath
+# Loading work.L2_Cache_sv_unit
+# Loading work.L2_Cache
+# Loading work.L2_cache_datapath_sv_unit
+# Loading work.L2_cache_datapath
+# Loading work.L2_address_parser_sv_unit
+# Loading work.L2_address_parser
+# Loading work.lru_array_sv_unit
+# Loading work.lru_array
+# Loading work.L2_orgate
+# Loading work.L2_data_sv_unit
+# Loading work.L2_data
+# Loading work.L2_datamux_sv_unit
+# Loading work.L2_datamux
+# Loading work.L2_tagmux_sv_unit
+# Loading work.L2_tagmux
+# Loading work.L2_cache_control_sv_unit
+# Loading work.L2_cache_control
+# Loading work.physical_memory
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 600 ns
+do wave.do ; restart -f ; run 5000ns
+# Loading sv_std.std
+# Loading work.mp3
+# Loading work.lc3b_types
+# Loading work.mp3_mod_sv_unit
+# Loading work.mp3_mod
+# Loading work.mp3_datapath_sv_unit
+# Loading work.mp3_datapath
+# Loading work.InstructionFetch_sv_unit
+# Loading work.InstructionFetch
+# Loading work.plus2
+# Loading work.adder_sv_unit
+# Loading work.adder
+# Loading work.mux4_sv_unit
+# Loading work.mux4
+# Loading work.register
+# Loading work.mux2
+# Loading work.btb_sv_unit
+# Loading work.btb
+# Loading work.pc_array_sv_unit
+# Loading work.pc_array
+# Loading work.tag_comparator_sv_unit
+# Loading work.tag_comparator
+# Loading work.checkpc
+# Loading work.instr_array_sv_unit
+# Loading work.instr_array
+# Loading work.counter_sv_unit
+# Loading work.counter
+# Loading work.stall
+# Loading work.IF_ID_sv_unit
+# Loading work.IF_ID
+# Loading work.InstructionDecode_sv_unit
+# Loading work.InstructionDecode
+# Loading work.ID_Datapath_sv_unit
+# Loading work.ID_Datapath
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.sext_sv_unit
+# Loading work.sext
+# Loading work.ControlROM_sv_unit
+# Loading work.ControlROM
+# Loading work.hazard_detection_sv_unit
+# Loading work.hazard_detection
+# Loading work.ID_EX_sv_unit
+# Loading work.ID_EX
+# Loading work.InstructionExecute_sv_unit
+# Loading work.InstructionExecute
+# Loading work.zextshift_sv_unit
+# Loading work.zextshift
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.mux3_sv_unit
+# Loading work.mux3
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.forwarding_unit_sv_unit
+# Loading work.forwarding_unit
+# Loading work.EX_MEM_sv_unit
+# Loading work.EX_MEM
+# Loading work.instructionMem_sv_unit
+# Loading work.instructionMem
+# Loading work.MEM_WB_sv_unit
+# Loading work.MEM_WB
+# Loading work.instructionWB_sv_unit
+# Loading work.instructionWB
+# Loading work.trim_byte_sv_unit
+# Loading work.trim_byte
+# Loading work.mux5_sv_unit
+# Loading work.mux5
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.comparator_sv_unit
+# Loading work.comparator
+# Loading work.branch_logic_sv_unit
+# Loading work.branch_logic
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.address_parser_sv_unit
+# Loading work.address_parser
+# Loading work.array_sv_unit
+# Loading work.array
+# Loading work.andgate
+# Loading work.orgate
+# Loading work.data_sv_unit
+# Loading work.dataunit
+# Loading work.datamux_sv_unit
+# Loading work.datamux
+# Loading work.decoder_sv_unit
+# Loading work.decoder
+# Loading work.tagmux_sv_unit
+# Loading work.tagmux
+# Loading work.cache_control
+# Loading work.arbiter_sv_unit
+# Loading work.arbiter
+# Loading work.arbiter_control
+# Loading work.arbiter_datapath_sv_unit
+# Loading work.arbiter_datapath
+# Loading work.L2_Cache_sv_unit
+# Loading work.L2_Cache
+# Loading work.L2_cache_datapath_sv_unit
+# Loading work.L2_cache_datapath
+# Loading work.L2_address_parser_sv_unit
+# Loading work.L2_address_parser
+# Loading work.lru_array_sv_unit
+# Loading work.lru_array
+# Loading work.L2_orgate
+# Loading work.L2_data_sv_unit
+# Loading work.L2_data
+# Loading work.L2_datamux_sv_unit
+# Loading work.L2_datamux
+# Loading work.L2_tagmux_sv_unit
+# Loading work.L2_tagmux
+# Loading work.L2_cache_control_sv_unit
+# Loading work.L2_cache_control
+# Loading work.physical_memory

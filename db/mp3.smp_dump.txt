@@ -1,0 +1,30 @@
+
+State Machine - |mp3_mod|L2_Cache:L2cache|L2_cache_control:control_unit|state
+Name state.start state.dirty state.retrieve state.next 
+state.start 0 0 0 0 
+state.next 1 0 0 1 
+state.retrieve 1 0 1 0 
+state.dirty 1 1 0 0 
+
+State Machine - |mp3_mod|arbiter:arbiterunit|arbiter_control:arbcontrolunit|state
+Name state.stall_b state.stall_a state.respond_b state.respond_a state.active state.idle 
+state.idle 0 0 0 0 0 0 
+state.active 0 0 0 0 1 1 
+state.respond_a 0 0 0 1 0 1 
+state.respond_b 0 0 1 0 0 1 
+state.stall_a 0 1 0 0 0 1 
+state.stall_b 1 0 0 0 0 1 
+
+State Machine - |mp3_mod|cache:dcacheunit|cache_control:control_unit|state
+Name state.start state.dirty state.retrieve state.next 
+state.start 0 0 0 0 
+state.next 1 0 0 1 
+state.retrieve 1 0 1 0 
+state.dirty 1 1 0 0 
+
+State Machine - |mp3_mod|cache:icacheunit|cache_control:control_unit|state
+Name state.start state.dirty state.retrieve state.next 
+state.start 0 0 0 0 
+state.next 1 0 0 1 
+state.retrieve 1 0 1 0 
+state.dirty 1 1 0 0 

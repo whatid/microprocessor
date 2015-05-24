@@ -1,0 +1,40 @@
+library verilog;
+use verilog.vl_types.all;
+library work;
+entity InstructionExecute is
+    port(
+        clk             : in     vl_logic;
+        f_src1_in       : in     vl_logic_vector(2 downto 0);
+        f_src2_in       : in     vl_logic_vector(2 downto 0);
+        f_exmem_dest    : in     vl_logic_vector(2 downto 0);
+        f_wb_dest       : in     vl_logic_vector(2 downto 0);
+        exmem_regwrite  : in     vl_logic;
+        memwb_regwrite  : in     vl_logic;
+        sext6_in        : in     vl_logic_vector(15 downto 0);
+        trap_in         : in     vl_logic_vector(7 downto 0);
+        ctrl_in         : in     work.lc3b_types.lc3b_control_word;
+        adj11_in        : in     vl_logic_vector(15 downto 0);
+        adj11_out       : out    vl_logic_vector(15 downto 0);
+        jsr_in          : in     vl_logic;
+        jsr_out         : out    vl_logic;
+        ie_adj9_in      : in     vl_logic_vector(15 downto 0);
+        iesrc1_in       : in     vl_logic_vector(15 downto 0);
+        ie_adj9_out     : out    vl_logic_vector(15 downto 0);
+        ie_src1_in      : in     vl_logic_vector(15 downto 0);
+        ie_src2_out     : in     vl_logic_vector(15 downto 0);
+        ie_pc_out       : in     vl_logic_vector(15 downto 0);
+        dest_in         : in     vl_logic_vector(2 downto 0);
+        ie_adj6_out     : in     vl_logic_vector(15 downto 0);
+        imm4_in         : in     vl_logic_vector(3 downto 0);
+        ctrl_out        : out    work.lc3b_types.lc3b_control_word;
+        ie_alu_out      : out    vl_logic_vector(15 downto 0);
+        ie_src1_out     : out    vl_logic_vector(15 downto 0);
+        dest_out        : out    vl_logic_vector(2 downto 0);
+        new_ie_pc_out   : out    vl_logic_vector(15 downto 0);
+        ie_marmux_out   : out    vl_logic_vector(15 downto 0);
+        stb_word        : out    vl_logic_vector(15 downto 0);
+        stb_select      : out    vl_logic;
+        f_exmem_alu     : in     vl_logic_vector(15 downto 0);
+        f_wb_data       : in     vl_logic_vector(15 downto 0)
+    );
+end InstructionExecute;

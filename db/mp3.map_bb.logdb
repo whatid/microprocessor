@@ -1,0 +1,2 @@
+v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,mp3_datapath:cpu|InstructionExecute:execute|alu:alu_execute|lpm_mult:Mult0|mult_0dt:auto_generated|mac_out1,
